@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختبر نفسك | حصن المسلم</title>
+<meta name="description" content="أسئلة اختيار من متعدد عن كتاب حصن المسلم مع تغذية راجعة من الكتاب نفسه">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <nav class="topnav">
+      <a href="index.html">📖 الأذكار</a>
+      <a href="quiz.html" class="active">📝 اختبر نفسك</a>
+    </nav>
+    <h1>اختبر نفسك في حصن المسلم</h1>
+    <p class="subtitle">أسئلة اختيار من متعدد — كل سؤال مع تغذية راجعة بنص الكتاب (الذكر الصحيح + عدد التكرار + الفضل)</p>
+    <div class="controls" style="margin-top:12px">
+      <button id="btnTheme" title="وضع ليلي / نهاري">🌙</button>
+      <a class="quiz-link" href="index.html">→ عودة لصفحة الأذكار</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card" id="quiz-start">
+    <h2 style="margin-top:0">🚀 كيف يعمل الاختبار؟</h2>
+    <ul class="tips">
+      <li>عدد الأسئلة: <b id="qCount"></b> — كلها من محتوى الموقع (أي من الكتاب المرفق).</li>
+      <li>اختر إجابة واحدة، وستظهر لك فوراً <b>تغذية راجعة من الكتاب نفسه</b>.</li>
+      <li>في النهاية تحصل على نتيجتك + مراجعة الأخطاء.</li>
+    </ul>
+    <div class="quiz-actions">
+      <button id="btnStart" class="primary">ابدأ الاختبار</button>
+    </div>
+    <div class="stats" id="bestScore"></div>
+  </section>
+
+  <section class="card hidden" id="quiz-box">
+    <div class="progress"><div id="bar"></div></div>
+    <div class="q-meta"><span id="qNum"></span><span id="qScore"></span></div>
+    <h2 id="qText"></h2>
+    <div id="opts"></div>
+    <div id="feedback" class="feedback hidden"></div>
+    <div class="quiz-actions">
+      <button id="btnNext" class="primary hidden">السؤال التالي ←</button>
+    </div>
+  </section>
+
+  <section class="card hidden" id="quiz-result">
+    <h2 style="margin-top:0">🎉 نتيجتك</h2>
+    <div class="big-score"><span id="finalScore"></span></div>
+    <p id="grade"></p>
+    <div id="review"></div>
+    <div class="quiz-actions">
+      <button id="btnRetry" class="primary">🔄 إعادة الاختبار</button>
+      <a class="ghost-btn" href="index.html">📖 مراجعة الأذكار في الصفحة الرئيسية</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>المصدر: كتاب <b>حصن المسلم</b> — جميع الأسئلة والتغذية الراجعة من نصوص الكتاب المعروضة في <a href="index.html">الصفحة الرئيسية</a></p>
+    <p class="dua">🤲 لا تنسوني ووالديّ وذريتي من الدعاء</p>
+  </footer>
+</main>
+
+<script src="quiz.js"></script>
+<!-- 2026-10-17: تسجيل عامل الخدمة (يعمل على المنشور فقط، لا في التطوير ولا المعاينة) -->
+<script src="register-sw.js"></script>
+</body>
+</html>

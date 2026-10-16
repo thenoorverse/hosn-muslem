@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- لقطة محفوظة بتاريخ 2026-10-16: نسخة احتياطية كاملة من الموقع في snapshots/site-20261016-2335 للعودة إليها عند أي تغيير غير مرغوب فيه. تُؤخذ لقطة جديدة قبل أي تعديل لاحق. -->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حصن المسلم | موقع الأذكار</title>
+<meta name="description" content="موقع سهل ومرتب لأذكار حصن المسلم - المحتوى من كتاب حصن المسلم">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#14532d">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="حصن المسلم">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <nav class="topnav">
+      <a href="index.html" class="active">📖 الأذكار</a>
+      <a href="quiz.html">📝 اختبر نفسك</a>
+    </nav>
+    <div class="badge">🕌 من كتاب حصن المسلم</div>
+    <h1>حصن المسلم</h1>
+    <p class="author">تأليف: الشيخ سعيد بن علي بن وهف القحطاني رحمه الله</p>
+    <div class="toolbar">
+      <div class="search-box">
+        <input id="search" type="search" placeholder="ابحث عن ذكر أو دعاء… (مثال: النوم، الصباح، السفر)" autocomplete="off">
+      </div>
+      <div class="controls">
+        <button id="btnBigger" title="تكبير الخط">أ +</button>
+        <button id="btnSmaller" title="تصغير الخط">أ −</button>
+        <button id="btnTheme" title="وضع ليلي / نهاري">🌙</button>
+        <button id="btnReset" title="تصفير كل العدادات">تصفير العدادات</button>
+        <a class="quiz-link" href="quiz.html">📝 اختبر نفسك في الكتاب</a>
+        <a class="dl-link" href="hisn-al-muslim.pdf" target="_blank" rel="noopener">📖 فتح الكتاب PDF</a>
+      </div>
+    </div>
+    <nav class="cats" id="cats"></nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="intro card">
+    <h2>📖 عن هذا الموقع</h2>
+    <p>هذا الموقع <b>مستخرج من كتاب «حصن المسلم» المرفق (PDF)</b> — والملف الأصلي عبارة عن صور ممسوحة (166 صفحة تقريباً) لذلك أُعيد تنسيق محتواه هنا <b>نصاً مرتباً يسهل قراءته والبحث فيه</b>، دون إضافة من خارج الكتاب.</p>
+    <ul class="tips">
+      <li>🔢 كل بطاقة فيها <b>عدد التكرار</b> كما ورد في الكتاب + زر عداد وزر نسخ.</li>
+      <li>🌅 ابدأ بقسم <b>أذكار الصباح والمساء</b> فهو أهم ورد يومي في الكتاب.</li>
+      <li>🖨️ الصفحة مناسبة للطباعة والجوال، وتعمل بدون إنترنت.</li>
+    </ul>
+    <div class="stats"><span id="statCount"></span> • <span id="statCats"></span></div>
+  </section>
+
+  <div id="results-info"></div>
+  <div id="sections"></div>
+
+  <section class="card fadl">
+    <h2>فضل الذكر (من مقدمة الكتاب)</h2>
+    <p>قال الله تعالى: <span class="quran">﴿ فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ ﴾</span> [البقرة: 152]</p>
+    <p>وقال ﷺ: <span class="hadith">«مثل الذي يذكر ربه والذي لا يذكر ربه مثل الحي والميت»</span> متفق عليه.</p>
+    <p>وقال ﷺ: <span class="hadith">«سبق المفرِّدون» قالوا: وما المفرِّدون يا رسول الله؟ قال: «الذاكرون الله كثيراً والذاكرات»</span> رواه مسلم.</p>
+  </section>
+
+  <footer>
+    <p>المصدر: كتاب <b>حصن المسلم من أذكار الكتاب والسنة</b> — ملف PDF المرفق في المجلد • إعداد الموقع: تنسيق تعليمي للقراءة فقط</p>
+    <p class="dua">🤲 لا تنسوني ووالديّ وذريتي من الدعاء</p>
+  </footer>
+</main>
+
+<button id="toTop" title="العودة للأعلى">↑</button>
+<!-- 2026-10-17: نافذة اقتراح تثبيت الموقع كتطبيق عند الزيارة -->
+<div id="installPopup" class="install-popup hidden" role="dialog" aria-live="polite">
+  <div class="install-text">📲 يمكنك تثبيت الموقع كتطبيق على هاتفك لفتحه بسرعة وقراءته دون اتصال.</div>
+  <div id="iosHint" class="hidden">على الآيفون: اضغط زر المشاركة ⎙ ثم «إضافة إلى الشاشة الرئيسية».</div>
+  <div class="install-btns">
+    <button id="btnInstall" class="primary">تثبيت التطبيق</button>
+    <button id="btnInstallLater">لاحقاً</button>
+  </div>
+</div>
+<script src="app.js"></script>
+<script src="install.js"></script>
+<!-- 2026-10-17: تسجيل عامل الخدمة (يعمل على المنشور فقط، لا في التطوير ولا المعاينة) -->
+<script src="register-sw.js"></script>
+</body>
+</html>

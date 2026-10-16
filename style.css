@@ -1,0 +1,102 @@
+:root{
+  --bg:#f6f1e7; --card:#ffffff; --ink:#2b2b2b; --muted:#6b6257;
+  --brand:#1a6b4a; --brand2:#c9a227; --line:#e7dcc6; --chip:#eef5ef;
+  --shadow:0 6px 22px rgba(0,0,0,.07);
+  --fs:19px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Amiri","Traditional Arabic","Simplified Arabic","Segoe UI",Tahoma,Arial,sans-serif;
+  font-size:var(--fs);line-height:2}
+body.dark{--bg:#121614;--card:#1c221f;--ink:#eef2ec;--muted:#a9b3a9;--line:#2c352f;--chip:#233329;--shadow:0 6px 22px rgba(0,0,0,.4)}
+.hero{background:linear-gradient(135deg,#0e4d34,#1a6b4a 60%,#2e8b57);color:#fff;padding:22px 16px}
+.hero-inner{max-width:1000px;margin:auto}
+.topnav{display:flex;gap:8px;margin-bottom:12px}
+.topnav a{color:#fff;text-decoration:none;border:1.5px solid rgba(255,255,255,.55);border-radius:999px;padding:6px 18px;font-size:.92em}
+.topnav a.active,.topnav a:hover{background:#fff;color:#14532d;font-weight:bold}
+.quiz-link{display:inline-block;background:#c9a227!important;color:#3a2d00!important;text-decoration:none;border-radius:12px;padding:10px 16px;font-weight:bold}
+.quiz-link:hover{transform:translateY(-1px)}
+.dl-link{display:inline-block;background:#fff!important;color:#14532d!important;text-decoration:none;border-radius:12px;padding:10px 16px;font-weight:bold;border:2px solid #fff}
+.dl-link:hover{transform:translateY(-1px);background:#eaf7ef!important}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);padding:4px 14px;border-radius:999px;font-size:.85em}
+.hero h1{margin:10px 0 4px;font-size:2.4em}
+.subtitle{margin:0;opacity:.95}
+.author{margin:4px 0 16px;opacity:.8;font-size:.9em}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:stretch}
+.search-box{flex:1;min-width:240px}
+.search-box input{width:100%;padding:12px 16px;border-radius:12px;border:0;font-size:1rem;font-family:inherit}
+.controls{display:flex;gap:8px;flex-wrap:wrap}
+.controls button{border:0;border-radius:12px;padding:10px 14px;cursor:pointer;font-family:inherit;font-weight:bold;background:#fff;color:#14532d}
+.controls button:hover{transform:translateY(-1px)}
+.cats{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.cats button{border:1.5px solid rgba(255,255,255,.55);background:transparent;color:#fff;border-radius:999px;padding:7px 15px;cursor:pointer;font-family:inherit;font-size:.92em}
+.cats button.active,.cats button:hover{background:#fff;color:#14532d}
+.container{max-width:1000px;margin:auto;padding:18px 14px 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0;box-shadow:var(--shadow)}
+.intro h2,.fadl h2{margin-top:0;color:var(--brand)}
+body.dark .intro h2,body.dark .fadl h2{color:#7fd6a4}
+.tips{margin:8px 0;padding-right:20px}
+.stats{color:var(--muted);font-size:.9em}
+.sec-title{display:flex;align-items:center;gap:10px;margin:30px 0 6px}
+.sec-title h2{margin:0;font-size:1.35em}
+.sec-title .count{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:0 12px;font-size:.8em;color:var(--muted)}
+.sec-desc{color:var(--muted);margin:0 0 8px}
+.zikr{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:12px 0;box-shadow:var(--shadow)}
+.zikr-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.zikr-head h3{margin:0;font-size:1.12em}
+.rep{background:#fff7dd;border:1.5px solid var(--brand2);color:#7a5c00;border-radius:999px;padding:2px 14px;font-weight:bold;white-space:nowrap;font-size:.9em}
+body.dark .rep{background:#2c2712;color:#ffd75e}
+.zikr .text{margin:10px 0;white-space:pre-line}
+.quran{color:#0e6b3c;font-weight:bold}
+body.dark .quran{color:#7fd6a4}
+.hadith{color:#374151}
+body.dark .hadith{color:#d4d4d4}
+.virtue{background:var(--chip);border-right:4px solid var(--brand);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:.93em;color:var(--muted)}
+.zikr-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.zikr-actions button{border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:10px;padding:6px 14px;cursor:pointer;font-family:inherit}
+.zikr-actions button.done{background:var(--brand);color:#fff;border-color:var(--brand)}
+.counter{min-width:90px;text-align:center;font-weight:bold;border:1.5px dashed var(--brand2)!important;background:transparent!important}
+#results-info{color:var(--muted);margin:6px 2px}
+footer{text-align:center;color:var(--muted);font-size:.88em;margin-top:26px}
+footer .dua{font-size:1.15em;font-weight:bold;color:var(--brand);margin-top:6px}
+body.dark footer .dua{color:#7fd6a4}
+#toTop{position:fixed;bottom:18px;left:18px;width:48px;height:48px;border-radius:50%;border:0;background:var(--brand);color:#fff;font-size:22px;cursor:pointer;box-shadow:var(--shadow);display:none}
+mark{background:#ffe58a;padding:0 4px;border-radius:4px}
+/* ===== صفحة الاختبار ===== */
+.hidden{display:none!important}
+.progress{background:var(--line);border-radius:999px;height:12px;overflow:hidden;margin-bottom:10px}
+.progress #bar{height:100%;width:0;background:linear-gradient(90deg,var(--brand),#2e8b57);transition:width .3s}
+.q-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:.9em}
+#qText{margin:8px 0 12px}
+#opts{display:flex;flex-direction:column;gap:10px}
+.opt{text-align:right;font-family:inherit;font-size:1em;background:var(--chip);border:1.5px solid var(--line);color:var(--ink);border-radius:12px;padding:12px 14px;cursor:pointer;line-height:1.9}
+.opt:hover:not(:disabled){border-color:var(--brand);transform:translateY(-1px)}
+.opt:disabled{cursor:default;opacity:.95}
+.opt .letter{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;align-items:center;justify-content:center;margin-left:8px;font-weight:bold}
+.opt.correct{border-color:#1a6b4a;background:#e6f4ea;color:#14532d;font-weight:bold}
+body.dark .opt.correct{background:#143324;color:#b6f0c8}
+.opt.wrong{border-color:#c0392b;background:#fdecea}
+body.dark .opt.wrong{background:#3a1d1d;color:#ffb4ab}
+.feedback{border-radius:12px;padding:12px 14px;margin-top:14px;border:1.5px solid var(--line)}
+.feedback.ok{background:#e6f4ea;border-color:#1a6b4a}
+body.dark .feedback.ok{background:#143324}
+.feedback.bad{background:#fef6e7;border-color:#c9a227}
+.fb-src{display:block;margin-top:6px;color:var(--muted)}
+.quiz-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+button.primary,.ghost-btn{background:var(--brand);color:#fff;border:0;border-radius:12px;padding:12px 22px;font-family:inherit;font-weight:bold;font-size:1em;cursor:pointer;text-decoration:none;display:inline-block}
+button.primary:hover{transform:translateY(-1px)}
+.ghost-btn{background:transparent;color:var(--brand);border:1.5px solid var(--brand)}
+.big-score{font-size:2.6em;font-weight:bold;color:var(--brand);text-align:center}
+body.dark .big-score{color:#7fd6a4}
+.rev{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:10px 0}
+.rev.rok{border-right:5px solid #1a6b4a}
+.rev.rbad{border-right:5px solid #c0392b}
+/* ===== نافذة اقتراح التثبيت ===== */
+.install-popup{position:fixed;bottom:16px;right:16px;left:16px;max-width:520px;margin:auto;background:var(--card);border:1.5px solid var(--brand2);border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);z-index:1000}
+.install-text{font-weight:bold}
+.install-btns{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.install-btns button{border-radius:12px;padding:9px 20px;font-family:inherit;font-weight:bold;cursor:pointer;font-size:.95em}
+#btnInstallLater{background:transparent;color:var(--muted);border:1.5px solid var(--line)}
+#iosHint{margin-top:8px;font-size:.9em;color:var(--muted)}
+@media print{.hero .toolbar,.cats,.zikr-actions,#toTop{display:none}body{background:#fff}.card,.zikr{box-shadow:none}}
+@media(max-width:600px){body{line-height:1.95}.hero h1{font-size:1.9em}}
