@@ -43,17 +43,10 @@
 </header>
 
 <main class="container">
-  <section class="intro card">
-    <h2>📖 عن هذا الموقع</h2>
-    <p>هذا الموقع <b>مستخرج من كتاب «حصن المسلم» المرفق (PDF)</b> — والملف الأصلي عبارة عن صور ممسوحة (166 صفحة تقريباً) لذلك أُعيد تنسيق محتواه هنا <b>نصاً مرتباً يسهل قراءته والبحث فيه</b>، دون إضافة من خارج الكتاب.</p>
-    <ul class="tips">
-      <li>🔢 كل بطاقة فيها <b>عدد التكرار</b> كما ورد في الكتاب + زر عداد وزر نسخ.</li>
-      <li>🌅 ابدأ بقسم <b>أذكار الصباح والمساء</b> فهو أهم ورد يومي في الكتاب.</li>
-      <li>🖨️ الصفحة مناسبة للطباعة والجوال، وتعمل بدون إنترنت.</li>
-    </ul>
-    <div class="stats"><span id="statCount"></span> • <span id="statCats"></span></div>
-  </section>
-
+  <!-- بطاقة "عن هذا الموقع" تُفتح عبر الزر أدناه فقط (غير ظاهرة مباشرة) -->
+  <div class="about-wrap">
+    <button id="btnAbout" class="primary">ℹ️ عن هذا الموقع</button>
+  </div>
   <div id="results-info"></div>
   <div id="sections"></div>
 
@@ -71,6 +64,29 @@
 </main>
 
 <button id="toTop" title="العودة للأعلى">↑</button>
+<!-- نافذة "عن هذا الموقع" (تظهر فقط عند الضغط على الزر أعلاه) -->
+<div id="aboutModal" class="modal hidden" role="dialog" aria-modal="true" aria-label="عن هذا الموقع">
+  <div class="modal-overlay" id="aboutOverlay"></div>
+  <div class="modal-content">
+    <button id="btnAboutClose" class="modal-close" title="إغلاق">✕</button>
+    <section class="intro card">
+      <h2 style="margin-top:0">ℹ️ عن هذا الموقع</h2>
+      <p>هذا الموقع <b>مستخرج من كتاب «حصن المسلم» المرفق (PDF)</b> — والملف الأصلي عبارة عن صور ممسوحة (166 صفحة تقريباً) لذلك أُعيد تنسيق محتواه هنا <b>نصاً مرتباً يسهل قراءته والبحث فيه</b>، دون إضافة من خارج الكتاب.</p>
+      <ul class="tips">
+        <li>🔢 كل بطاقة فيها <b>عدد التكرار</b> كما ورد في الكتاب + زر عداد وزر نسخ.</li>
+        <li>🌅 ابدأ بقسم <b>أذكار الصباح والمساء</b> فهو أهم ورد يومي في الكتاب.</li>
+        <li>🖨️ الصفحة مناسبة للطباعة والجوال، وتعمل بدون إنترنت.</li>
+      </ul>
+      <div class="stats"><span id="statCount"></span> • <span id="statCats"></span></div>
+    </section>
+    <section class="card fadl">
+      <h2>فضل الذكر (من مقدمة الكتاب)</h2>
+      <p>قال الله تعالى: <span class="quran">﴿ فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ ﴾</span> [البقرة: 152]</p>
+      <p>وقال ﷺ: <span class="hadith">«مثل الذي يذكر ربه والذي لا يذكر ربه مثل الحي والميت»</span> متفق عليه.</p>
+      <p>وقال ﷺ: <span class="hadith">«سبق المفرِّدون» قالوا: وما المفرِّدون يا رسول الله؟ قال: «الذاكرون الله كثيراً والذاكرات»</span> رواه مسلم.</p>
+    </section>
+  </div>
+</div>
 <!-- 2026-10-17: نافذة اقتراح تثبيت الموقع كتطبيق عند الزيارة -->
 <div id="installPopup" class="install-popup hidden" role="dialog" aria-live="polite">
   <div class="install-text">📲 يمكنك تثبيت الموقع كتطبيق على هاتفك لفتحه بسرعة وقراءته دون اتصال.</div>
@@ -80,6 +96,8 @@
     <button id="btnInstallLater">لاحقاً</button>
   </div>
 </div>
+<!-- زر تثبيت مستقل واضح في الزاوية -->
+<button id="btnInstallPopup">📲 ثبت التطبيق</button>
 <script src="app.js"></script>
 <script src="install.js"></script>
 <!-- 2026-10-17: تسجيل عامل الخدمة (يعمل على المنشور فقط، لا في التطوير ولا المعاينة) -->

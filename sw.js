@@ -4,7 +4,7 @@
    - الملفات ذات الأسماء المتغيرة (hash مثل app-a1b2c3d4.js أو ?v=): التخزين أولاً (cache-first)
    - باقي الملفات الثابتة: stale-while-revalidate
    - مسارات تسجيل الدخول وروابط OAuth: تُستثنى تماماً (شبكة فقط دون تخزين) */
-const VERSION = 'hisn-v4';
+const VERSION = 'hisn-v5';
 const SHELL_CACHE = VERSION + '-shell';
 const PAGES_CACHE = VERSION + '-pages';
 const ASSETS_CACHE = VERSION + '-assets';

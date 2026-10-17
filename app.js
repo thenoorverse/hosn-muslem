@@ -302,4 +302,39 @@ document.getElementById("btnReset").onclick = ()=>{ if(confirm("تصفير جم�
 window.addEventListener("scroll",()=>{ document.getElementById("toTop").style.display = window.scrollY>600?"block":"none"; });
 document.getElementById("toTop").onclick = ()=>window.scrollTo({top:0,behavior:"smooth"});
 
+/* ===== نافذة "عن هذا الموقع" ===== */
+(function(){
+  const modal = document.getElementById("aboutModal");
+  const btnOpen = document.getElementById("btnAbout");
+  const btnClose = document.getElementById("btnAboutClose");
+  const overlay = document.getElementById("aboutOverlay");
+  if(!modal || !btnOpen) return;
+  btnOpen.onclick = ()=>{ modal.classList.remove("hidden"); };
+  const close = ()=>{ modal.classList.add("hidden"); };
+  btnClose && (btnClose.onclick = close);
+  overlay && (overlay.onclick = close);
+  window.addEventListener("keydown",(e)=>{ if(e.key==="Escape") close(); });
+})();
+
+/* ===== زر التثبيت المستقل ===== */
+(function(){
+  const btn = document.getElementById("btnInstallPopup");
+  const popup = document.getElementById("installPopup");
+  const popupInstall = document.getElementById("btnInstall");
+  const popupLater = document.getElementById("btnInstallLater");
+  const iosHint = document.getElementById("iosHint");
+  if(!btn) return;
+  let deferred = null;
+  window.addEventListener("beforeinstallprompt",(e)=>{ e.preventDefault(); deferred = e; });
+  btn.onclick = async ()=>{
+    if(deferred){ try{ await deferred.prompt(); await deferred.userChoice; }catch(err){} deferred = null; return; }
+    if(popup){ popup.classList.remove("hidden"); }
+  };
+  if(popupInstall) popupInstall.onclick = async ()=>{
+    if(deferred){ try{ await deferred.prompt(); await deferred.userChoice; }catch(err){} deferred = null; }
+    popup && (popup.classList.add("hidden"));
+  };
+  if(popupLater) popupLater.onclick = ()=>{ popup && (popup.classList.add("hidden")); };
+})();
+
 renderCats(); render();
